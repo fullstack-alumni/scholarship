@@ -1,3 +1,5 @@
 node_modules/
 *.log
-dist/
+dist/*.js
+dist/stylesheets
+dist/*.map
