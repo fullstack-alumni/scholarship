@@ -20,6 +20,7 @@ export function getAll(req, res, next) {
 }
 
 export function getOne(req, res, next) {
+  console.log("getting one");
   let scholarId = parseInt(req.params.id);
   db.one('select * from scholars where id = $1', scholarId)
     .then(function (data) {
@@ -37,6 +38,7 @@ export function getOne(req, res, next) {
 
 export function create(req, res, next) {
   req.body.rank = parseInt(req.body.rank);
+  console.log(req.body);
   db.none('insert into scholars(name, email, rank)' +
       'values(${name}, ${email}, ${rank})',
     req.body)
@@ -53,7 +55,9 @@ export function create(req, res, next) {
 }
 
 export function update(req, res, next) {
-  db.none('update scholars set name=$1, email=$2, rank=$3, where id=$4',
+  console.log("update")
+  console.log(req.body, req.params.id);
+  db.none('update scholars set name=$1, email=$2, rank=$3 where id=$4',
     [req.body.name, req.body.email, parseInt(req.body.rank),
       parseInt(req.params.id)])
     .then(function () {
