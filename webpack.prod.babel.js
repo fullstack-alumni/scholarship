@@ -7,7 +7,7 @@ export default {
   context: resolve(__dirname),
 
   entry: [
-    './client.js'
+    './src/client.js'
   ],
 
   output: {
