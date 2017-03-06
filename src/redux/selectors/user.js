@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
-import * as userActions from '../modules/user';
+import * as userActions from 'redux/modules/user';
 
 const userSelector = ({ user }) => user; // { user } = global state
 

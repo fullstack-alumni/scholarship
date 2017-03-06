@@ -1,7 +1,7 @@
 import createLogger from 'redux-logger';
 import { applyMiddleware, createStore as reduxCreateStore } from 'redux';
-import reducer from './modules';
-import promiseMiddleware from './middleware/promiseMiddleware';
+import reducer from 'redux/modules';
+import promiseMiddleware from 'redux/middleware/promiseMiddleware';
 
 export default function createStore(initialState) {
   const createStoreWithMiddleware = applyMiddleware(

@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 
 import 'isomorphic-fetch';
 
-import routes from './routes';
-import App from './components/app';
-import createStore from './redux/create';
+import routes from 'routes';
+import App from 'components/app';
+import createStore from 'redux/create';
 
-import './stylesheets/main.less';
+import 'stylesheets/main.less';
 
 const APP = (
   <Provider store={createStore()}>
