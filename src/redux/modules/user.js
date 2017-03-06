@@ -1,5 +1,5 @@
 import { assign, identity } from 'lodash';
-import { handleAsyncAction } from '../utils';
+import { handleAsyncAction } from 'redux/utils';
 
 const LOAD_USER = 'user/LOAD_USER';
 

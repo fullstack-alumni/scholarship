@@ -5,7 +5,7 @@ import { expect } from 'chai';
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import LoggedInHome from './../../../components/home/logged-in';
+import LoggedInHome from './../../../src/components/home/logged-in';
 
 describe('LoggedInHome', () => {
   setupDOM();

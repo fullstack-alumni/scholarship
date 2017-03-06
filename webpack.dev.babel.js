@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import { resolve } from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import path from 'path';
 
 export default {
   context: resolve(__dirname),
@@ -21,6 +22,10 @@ export default {
   devtool: 'eval-source-map',
 
   resolve: {
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules'
+    ],
     extensions: ['.js', '.jsx']
   },
 

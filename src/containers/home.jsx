@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import { selector, mapDispatchToProps } from '../../redux/selectors/user';
+import { selector, mapDispatchToProps } from 'redux/selectors/user';
 
-import LoggedInHome from './logged-in';
-import LoggedOutHome from './logged-out';
+import LoggedInHome from 'components/home/logged-in';
+import LoggedOutHome from 'components/home/logged-out';
 
 class Home extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import { assign, omit } from 'lodash';
-import * as apiClient from '../../api_client';
+import * as apiClient from 'api_client';
 
 export default function promiseMiddleware({ dispatch, getState }) {
   return (next) => (action) => {
