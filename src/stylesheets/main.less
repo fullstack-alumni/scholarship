@@ -1,4 +1,28 @@
-body {
-  color: white;
-  background: black;
+@import "colors.less";
+
+body html {
+  width : 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oxygen", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: @text-dark;
+  background-color: @background;
+}
+
+@navbar-height : 63px;
+.title-bar{
+  height: @navbar-height;
+  position: fixed;
+  width: 100%;
+  color : black;
+  background: @primary;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.links{
+  float:right;
+  text-align: center;
 }
