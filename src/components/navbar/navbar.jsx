@@ -16,8 +16,3 @@ export default class TitleBar extends React.PureComponent {
     );
   }
 }
-
-TitleBar.propTypes = {
-  leftItems: React.PropTypes.node,
-  rightItems: React.PropTypes.node,
-};
