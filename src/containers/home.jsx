@@ -5,6 +5,7 @@ import { selector, mapDispatchToProps } from 'redux/selectors/user';
 
 import LoggedInHome from 'components/home/logged-in';
 import LoggedOutHome from 'components/home/logged-out';
+import TitleBar from 'components/navbar/navbar';
 
 class Home extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Home extends Component {
     const View = isLoggedIn ? LoggedInHome : LoggedOutHome;
     return (
       <div>
+        <TitleBar/>
         hey there user id {user.id}
         <View />
       </div>
