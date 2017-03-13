@@ -1,11 +1,11 @@
-import { mockDOM, setupDOM } from './../frontend_utils';
+import { mockDOM, setupDOM } from './../../frontend_utils';
 mockDOM();
 
 import { expect } from 'chai';
 
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import TitleBar from './../../src/components/title_bar';
+import TitleBar from './../../../src/components/title_bar/title_bar';
 
 describe('TitleBar', () => {
   setupDOM();

@@ -7,10 +7,26 @@
   height: @title_bar_height;
   background-color: @color_primary;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__items {
+    display: flex;
+    height: 100%;
+  }
+
+  &__item {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    .link {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 .body-with-title-bar {
