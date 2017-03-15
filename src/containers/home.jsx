@@ -5,6 +5,7 @@ import { selector, mapDispatchToProps } from 'redux/selectors/user';
 
 import LoggedInHome from 'components/home/logged-in';
 import LoggedOutHome from 'components/home/logged-out';
+import Footer from 'components/footer/footer';
 
 class Home extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Home extends Component {
     return (
       <div>
         <View />
+        <Footer />
       </div>
     );
   }
