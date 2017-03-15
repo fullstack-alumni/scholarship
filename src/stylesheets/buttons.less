@@ -1,0 +1,60 @@
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  height: 32px;
+  padding: 6px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  font: inherit;
+
+  // Secondary traits
+  font-weight: 400;
+  border: 1px solid @color_primary;
+  background-color: white;
+  color: @color_text;
+
+  &:hover:enabled {
+    text-decoration: none;
+    color: @color_primary_light;
+    border: 1px solid @color_primary_light;
+  }
+
+  &:active:enabled {
+    text-decoration: none;
+    color: @color_primary;
+    border: 1px solid @color_primary_dark;
+  }
+
+  &.primary {
+    font-weight: 700;
+    border: none;
+    color: white;
+    background-color: @color_primary;
+
+    &:hover:enabled {
+      border: none;
+      color: white;
+      background-color: @color_primary_light;
+    }
+
+    &:active:enabled {
+      border: none;
+      color: white;
+      background-color: @color_primary_dark;
+    }
+  }
+
+  &.disabled, &:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+
+  &.large {
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

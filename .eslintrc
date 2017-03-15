@@ -4,7 +4,6 @@
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": [1, 'never', {'less': 'always'}],
-    "react/jsx-filename-extension": "off",
     "comma-dangle": "off",
     "arrow-parens": "off",
     "arrow-body-style": "off",
