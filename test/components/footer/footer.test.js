@@ -11,7 +11,7 @@ describe('Footer', () => {
   setupDOM();
 
   it('should be a stateless function', () => {
-    const component = TestUtils.renderIntoDocument(<Footer />);
-    expect(component).to.be.null;
+    const component = TestUtils.renderIntoDocument(<Footer/>);
+    expect(component.state).to.be.null;
   });
 });
