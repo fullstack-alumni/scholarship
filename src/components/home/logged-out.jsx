@@ -30,7 +30,18 @@ export default class LoggedOutHome extends React.PureComponent {
       <div>
         {this.renderTitleBar()}
         <div className="body-with-title-bar container">
-          logged out wew
+          <div className="Header">
+          the alumni-powered scholarship</div>
+          <div> built by </div>
+          <div> fullstack academy alumni for future alumni
+          </div>
+
+          <div className="row">
+            <div className="col-sm-6 col-lg-3"></div>
+            <div className="col-sm-6 col-lg-3"></div>
+            <div className="col-sm-6 col-lg-3"></div>
+            <div className="col-sm-6 col-lg-3"></div>
+          </div>
         </div>
       </div>
     );
