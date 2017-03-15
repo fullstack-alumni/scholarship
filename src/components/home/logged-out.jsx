@@ -3,6 +3,8 @@ import React from 'react';
 import TitleBar from 'components/title_bar/title_bar';
 import TitleBarItem, { TitleBarItemTypes } from 'components/title_bar/title_bar_item';
 
+
+
 export default class LoggedOutHome extends React.PureComponent {
   renderTitleBar() {
     const applyLink = (
@@ -26,21 +28,26 @@ export default class LoggedOutHome extends React.PureComponent {
   }
 
   render() {
+    const placeholder = '../../../dist/images/placeholder.png'
     return (
       <div>
         {this.renderTitleBar()}
         <div className="body-with-title-bar container">
-          <div className="Header">
-          the alumni-powered scholarship</div>
+        <div className="description">
+          <div className="header1">
+          the alumni-powered
+          </div>
+          <div className="header2">scholarship</div>
           <div> built by </div>
           <div> fullstack academy alumni for future alumni
           </div>
+        </div>
 
           <div className="row">
-            <div className="col-sm-6 col-lg-3"></div>
-            <div className="col-sm-6 col-lg-3"></div>
-            <div className="col-sm-6 col-lg-3"></div>
-            <div className="col-sm-6 col-lg-3"></div>
+            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
+            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
+            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
+            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
           </div>
         </div>
       </div>
