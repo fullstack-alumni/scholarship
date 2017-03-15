@@ -6,25 +6,25 @@ export default class Footer extends React.PureComponent {
       <div className="footer container">
         <div className="row">
           <div className="col-sm-12 col-md-2 info-link">
-            <div>
+            <div className="sponser">
               Want to Sponser?
             </div>
-            <div>
+            <div className="questions">
               Have questions?
             </div>
-            <div>
+            <div className="email">
               team@alumni.com
             </div>
           </div>
           <div className="col-sm-12 col-md-2 contact-link">
             <div>
-              about
+              About
             </div>
             <div>
-              contribute
+              Contribute
             </div>
             <div>
-              apply
+              Apply
             </div>
           </div>
         </div>
