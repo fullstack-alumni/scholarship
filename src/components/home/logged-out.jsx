@@ -28,7 +28,6 @@ export default class LoggedOutHome extends React.PureComponent {
   }
 
   render() {
-    const placeholder = '../../../dist/images/placeholder.png'
     return (
       <div>
         {this.renderTitleBar()}
@@ -44,10 +43,10 @@ export default class LoggedOutHome extends React.PureComponent {
         </div>
 
           <div className="row">
-            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
-            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
-            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
-            <div className="col-sm-6 col-lg-3"><img src={placeholder}/></div>
+            <div className="col-sm-6 col-lg-3"><img src='./imgs/placehoder.png'/></div>
+            <div className="col-sm-6 col-lg-3"><img src='./imgs/placehoder.png'/></div>
+            <div className="col-sm-6 col-lg-3"><img src='./imgs/placehoder.png'/></div>
+            <div className="col-sm-6 col-lg-3"><img src='./imgs/placehoder.png'/></div>
           </div>
         </div>
       </div>
