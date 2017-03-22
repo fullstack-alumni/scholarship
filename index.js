@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import path from 'path';
+import db from './database';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,7 +22,9 @@ app.use((err, req, res, next) => {
   res.status(400).send(err.message);
 });
 
-app.listen(port, () => console.log(`${emoji.ear} listenin on ${port} ${emoji.ear}`));
+db.sync().then(() => {
+  app.listen(port, () => console.log(`${emoji.ear} listenin on ${port} ${emoji.ear}`));
+});
 
 import { addRoutes } from './api/endpoints';
 addRoutes(app);

@@ -46,4 +46,12 @@ su vagrant -c "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/i
 su vagrant -c "echo 'vagrant' | chsh -s `which zsh`"
 
     # ----- Environment and Conveniences -----
-echo "cd /scholarship" >> /home/vagrant/.zshrc
+echo "export NODE_ENV=development" >> /home/vagrant/.zshrc
+echo "export PORT=3000" >> /home/vagrant/.zshrc
+echo "export DB_NAME=scholarship" >> /home/vagrant/.zshrc
+echo "export DB_USER=vagrant" >> /home/vagrant/.zshrc
+echo "export DB_PASS=vagrant" >> /home/vagrant/.zshrc
+echo "export DB_PORT=5432" >> /home/vagrant/.zshrc
+echo "export DB_HOST=localhost" >> /home/vagrant/.zshrc
+
+echo "cd /home/vagrant/scholarship" >> /home/vagrant/.zshrc

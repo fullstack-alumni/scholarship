@@ -4,3 +4,4 @@ dist/*.js
 dist/stylesheets
 dist/*.map
 .vagrant
+.idea
