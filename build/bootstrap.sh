@@ -38,4 +38,12 @@ apt-get install -y nodejs
 # ----- End Node Installation -----
 
 # ----- Environment and Ease of Use -----
-echo "cd /scholarship" >> /home/vagrant/.bashrc
+
+    # ----- zshhhhhh -----
+apt-get install -y zsh
+apt-get install -y git-core
+su vagrant -c "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh"
+su vagrant -c "echo 'vagrant' | chsh -s `which zsh`"
+
+    # ----- Environment and Conveniences -----
+echo "cd /scholarship" >> /home/vagrant/.zshrc

@@ -1,4 +1,4 @@
-import { emoji } from 'node-emoji'
+import {emoji} from 'node-emoji'
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -6,6 +6,10 @@ import path from 'path';
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV === 'development') {
+  require('./build/apply-build-middleware').default(app);
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
