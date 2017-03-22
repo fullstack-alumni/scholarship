@@ -1,50 +1,32 @@
 # culture.shift()
 
+## Set up Vagrant
+
+Instructions on how to do this can be found in [`/build/vagrant-setup-and-usage-instructions.md`]()
+
 ## Getting Started
 
-Ensure `PG_PATH` in the `Makefile` is correct. If you're unsure about this, install the [Postgres App](http://postgresapp.com/).
-
-Run the following:
-
+On your host machine (all other commands in this README is within VM (`vagrant ssh`)):
 ```
 $ npm install
-$ make new
 ```
 
-You're now ready to get started.
-
+Inside VM (`vagrant ssh`):
 ```
 $ npm start
 ```
 
-Navigate to localhost:3000.
+Navigate to localhost:3000. Webpack compilation operates on the same process as the API server.
 
-For the FE dev server, run the following.
+## Seeding Database
 
+Inside VM (`vagrant ssh`):
 ```
-$ npm run dev
+$ npm run seed
 ```
-
-You can now visit your dev server at localhost:8080. To interact withe API, make sure your API server is running on port 3000.
-
-Running:
-
-```
-$ npm run build
-```
-
-will create a production bundle of your JS which can be viewed at localhost:3000
-
-## Rebuilding
-
-Sometimes you'll need to rebuild (i.e. new npm dependencies, database changes, etc). To do this, run `$ make rebuild`. This will resolve any new npm dependencies and rebuild the database while attempting to preserve the local data (if compatible with the schema). You may need to disconnect from the postgres server for this to run correctly.
 
 ## Testing
 
-Tests use [Mocha](http://mochajs.org/) and [Chai.js](http://chaijs.com/). New tests should be included in the `test` directory (see `test/example.js` for an example test).
+Tests use [Mocha](http://mochajs.org/) and [Chai.js](http://chaijs.com/). New tests should be included in the `test` directory.
 
 To execute the test suite, run `npm test`.
-
-## Tables
-
-New tables should be specified in a `.sql` file in the `database` directory. They should also be added to the `TABLES` variable in the `Makefile`.
