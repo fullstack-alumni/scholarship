@@ -43,7 +43,13 @@ apt-get install -y nodejs
 apt-get install -y zsh
 apt-get install -y git-core
 su vagrant -c "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh"
-su vagrant -c "echo 'vagrant' | chsh -s `which zsh`"
+chsh -s $(which zsh) vagrant
+sed -i '/ZSH_THEME=/c\ZSH_THEME="dstufft"' /home/vagrant/.zshrc
+sed -i "/PROMPT=/c\PROMPT='
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[g$
+$(virtualenv_info)$(prompt_char) '" /home/vagrant/.oh-my-zsh/themes/dstufft.zsh-theme
+
+echo "So it seems like things probably broke right above this line (Authentication failure/command not found), but it is actually fine. All done!"
 
     # ----- Environment and Conveniences -----
 echo "export NODE_ENV=development" >> /home/vagrant/.zshrc
