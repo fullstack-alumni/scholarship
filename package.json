@@ -4,7 +4,7 @@
   "description": "a fund for students by alumni",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
+    "start": "NODE_ENV=development nodemon index.js --exec babel-node --presets es2015,stage-2",
     "build:prod": "webpack --config ./build/webpack.prod.babel.js",
     "test": "mocha",
     "seed": "babel-node ./database/seed.js --presets es2015,stage-2"
