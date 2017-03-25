@@ -45,3 +45,17 @@ TitleBarItem.propTypes = {
   href: React.PropTypes.string,
   onClick: React.PropTypes.func,
 };
+
+// --- Premade title bar items --- //
+export const applyItem = <TitleBarItem
+  text="Apply"
+  type={TitleBarItemTypes.LINK}
+  href="/apply"
+  key={1}
+/>
+
+export const loginItem = <TitleBarItem
+  text="Log in"
+  type={TitleBarItemTypes.LINK}
+  href="/login"
+/>
