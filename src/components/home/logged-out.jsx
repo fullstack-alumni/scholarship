@@ -40,13 +40,17 @@ export default class LoggedOutHome extends React.PureComponent {
         </div>
           <div className="row">
             <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
+              <img className="image" src='/imgs/placeholder.png'/>
+            </div>
             <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
+              <img className="image" src='/imgs/placeholder.png'/>
+            </div>
             <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
+              <img className="image" src='/imgs/placeholder.png'/>
+            </div>
             <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
+              <img className="image" src='/imgs/placeholder.png'/>
+            </div>
           </div>
         </div>
       </div>
