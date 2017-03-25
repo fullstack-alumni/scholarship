@@ -63,10 +63,6 @@ export default {
       {
         include: /\.json$/,
         loader: 'json'
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/,
-        loader:'file?name=/images/[name].[ext]'
       }
     ]
   },
