@@ -24,30 +24,50 @@ export default class LoggedOutHome extends React.PureComponent {
     return <TitleBar rightItems={rightItems} />;
   }
 
+  renderLogoutViewHeader() {
+    const header = (
+      <div className="description">
+        <h1 className="header">
+           the alumni-powered
+        </h1>
+        <h2 className="header">
+           scholarship
+        </h2>
+        <p>
+          built by<br />
+          fullstack academy alumni for future alumni
+        </p>
+      </div>);
+    return header;
+  }
+
+  renderLogoutViewImages() {
+    const images = (
+      <div className="row">
+        <div className="col-sm-6 col-md-3 col-lg-3">
+          <img className="image" src='/imgs/placeholder.png'/>
+        </div>
+        <div className="col-sm-6 col-md-3 col-lg-3">
+          <img className="image" src='/imgs/placeholder.png'/>
+        </div>
+        <div className="col-sm-6 col-md-3 col-lg-3">
+          <img className="image" src='/imgs/placeholder.png'/>
+        </div>
+        <div className="col-sm-6 col-md-3 col-lg-3">
+          <img className="image" src='/imgs/placeholder.png'/>
+        </div>
+      </div>
+    );
+    return images;
+  }
+
   render() {
     return (
       <div>
         {this.renderTitleBar()}
         <div className="body-with-title-bar container">
-        <div className="description">
-          <div className="header1">
-          the alumni-powered
-          </div>
-          <div className="header2">scholarship</div>
-          <div> built by </div>
-          <div> fullstack academy alumni for future alumni
-          </div>
-        </div>
-          <div className="row">
-            <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
-            <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
-            <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
-            <div className="col-sm-6 col-md-3 col-lg-3">
-            <img className="image" src='/imgs/placeholder.png'/></div>
-          </div>
+          {this.renderLogoutViewHeader()}
+          {this.renderLogoutViewImages()}
         </div>
       </div>
     );
