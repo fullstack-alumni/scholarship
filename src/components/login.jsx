@@ -7,7 +7,7 @@ import { applyItem } from 'components/title_bar/title_bar_item';
 export default class Login extends React.PureComponent {
   renderForm() {
     return (
-      <div className="form">
+      <div>
         <input
           className="input"
           placeholder="Email Address"
@@ -26,15 +26,11 @@ export default class Login extends React.PureComponent {
 
   renderExtraText() {
     return (
-      <div>
-        <div>
-          <a>Sign up</a> as a doner
-        </div>
-        <div>
-          <a>Apply</a> for a scholarship
-        </div>
-      </div>
-    )
+      <p>
+        <a>Sign up</a> as a doner<br />
+        <a>Apply</a> for a scholarship
+      </p>
+    );
   }
 
   render() {
