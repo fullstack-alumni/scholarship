@@ -25,17 +25,18 @@ export default class LoggedOutHome extends React.PureComponent {
   }
 
   renderHeader() {
-    const header = (
+    return (
       <div className="description text-center">
         <h1 className="header">
-           the alumni-powered<br/> scholarship
+          the alumni-powered<br />
+          scholarship
         </h1>
         <p>
           built by<br />
           fullstack academy alumni for future alumni
         </p>
-      </div>);
-    return header;
+      </div>
+    );
   }
 
   renderImage(key) {
