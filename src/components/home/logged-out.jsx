@@ -38,7 +38,7 @@ export default class LoggedOutHome extends React.PureComponent {
           <div> fullstack academy alumni for future alumni
           </div>
         </div>
-          <div className="row">
+          <div className="row homeImages">
             <div className="col-sm-6 col-md-3 col-lg-3">
               <img className="image" src='/imgs/placeholder.png'/>
             </div>
