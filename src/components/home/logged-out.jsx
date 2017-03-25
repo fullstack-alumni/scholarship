@@ -24,15 +24,12 @@ export default class LoggedOutHome extends React.PureComponent {
     return <TitleBar rightItems={rightItems} />;
   }
 
-  renderLogoutViewHeader() {
+  renderHeader() {
     const header = (
-      <div className="description">
+      <div className="description text-center">
         <h1 className="header">
-           the alumni-powered
+           the alumni-powered<br/> scholarship
         </h1>
-        <h2 className="header">
-           scholarship
-        </h2>
         <p>
           built by<br />
           fullstack academy alumni for future alumni
@@ -41,23 +38,19 @@ export default class LoggedOutHome extends React.PureComponent {
     return header;
   }
 
-  renderLogoutViewImages() {
-    const images = (
-      <div className="row">
-        <div className="col-sm-6 col-md-3 col-lg-3">
-          <img className="image" src='/imgs/placeholder.png'/>
-        </div>
-        <div className="col-sm-6 col-md-3 col-lg-3">
-          <img className="image" src='/imgs/placeholder.png'/>
-        </div>
-        <div className="col-sm-6 col-md-3 col-lg-3">
-          <img className="image" src='/imgs/placeholder.png'/>
-        </div>
-        <div className="col-sm-6 col-md-3 col-lg-3">
-          <img className="image" src='/imgs/placeholder.png'/>
-        </div>
+  renderImage(key) {
+    return (
+      <div className="col-sm-6 col-md-3 col-lg-3" key={key}>
+        <img className="image" src='/imgs/placeholder.png'/>
       </div>
     );
+  }
+
+  renderImages() {
+    const images = [];
+    for (let i = 0; i < 4; i++) {
+      images.push(this.renderImage(i));
+    }
     return images;
   }
 
@@ -66,8 +59,8 @@ export default class LoggedOutHome extends React.PureComponent {
       <div>
         {this.renderTitleBar()}
         <div className="body-with-title-bar container">
-          {this.renderLogoutViewHeader()}
-          {this.renderLogoutViewImages()}
+          {this.renderHeader()}
+          {this.renderImages()}
         </div>
       </div>
     );
