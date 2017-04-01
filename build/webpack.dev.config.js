@@ -1,40 +1,32 @@
 import webpack from 'webpack';
-import { resolve } from 'path';
+import {resolve} from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import path from 'path';
+
+const projectRoot = resolve(__dirname, '../');
 
 export default {
-  context: resolve(__dirname),
+
+  context: projectRoot,
 
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client',
     './src/client.jsx'
   ],
 
   output: {
     filename: 'fund.js',
-    path: resolve(__dirname, 'dist'),
-    publicPath: '/',
-    pathinfo: true
+    path: resolve(projectRoot, './dist'),
+    publicPath: 'http://localhost:3000/'
   },
 
   devtool: 'eval-source-map',
 
   resolve: {
     modules: [
-      path.join(__dirname, 'src'),
+      'src',
       'node_modules'
     ],
     extensions: ['.js', '.jsx']
-  },
-
-  devServer: {
-    hot: true,
-    contentBase: resolve(__dirname, 'dist'),
-    publicPath: '/',
-    historyApiFallback: true,
-    headers: { 'Access-Control-Allow-Origin': '*' }
   },
 
   module: {
@@ -69,7 +61,9 @@ export default {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTextPlugin('stylesheets/fund.compiled.css'),
     new webpack.DefinePlugin({
       'DEV': true

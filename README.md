@@ -1,50 +1,40 @@
 # culture.shift()
 
+## To Vagrant or not to Vagrant?
+
+If you'd like to use Vagrant to work on this project, instructions on how to do this can be found in [`/build/vagrant-setup-and-usage-instructions.md`](). This is an optional workflow and should only be used if 1) your machine can handle a VM and 2) you are willing to learn how to use Vagrant if you don't already know.
+
+If not using vagrant, make sure you are using `node>=7.0` and have Postgres installed on your machine. Vagrant environment uses `9.3` but versions `9.x` should work fine.
+
+The instructions below are the same if using vagrant or not. If using Vagrant, *all commands except `npm install`* will be done through SSH using `vagrant ssh`.
+
 ## Getting Started
-
-Ensure `PG_PATH` in the `Makefile` is correct. If you're unsure about this, install the [Postgres App](http://postgresapp.com/).
-
-Run the following:
 
 ```
 $ npm install
-$ make new
 ```
-
-You're now ready to get started.
 
 ```
 $ npm start
 ```
 
-Navigate to localhost:3000.
+Navigate to http://localhost:3000. Webpack compilation operates on the same process as the API server (using webpack development middleware).
 
-For the FE dev server, run the following.
+## Initializing and Seeding Database
 
+If not using Vagrant, initialize database:
+ 
 ```
-$ npm run dev
-```
-
-You can now visit your dev server at localhost:8080. To interact withe API, make sure your API server is running on port 3000.
-
-Running:
-
-```
-$ npm run build
+createdb scholarship
 ```
 
-will create a production bundle of your JS which can be viewed at localhost:3000
-
-## Rebuilding
-
-Sometimes you'll need to rebuild (i.e. new npm dependencies, database changes, etc). To do this, run `$ make rebuild`. This will resolve any new npm dependencies and rebuild the database while attempting to preserve the local data (if compatible with the schema). You may need to disconnect from the postgres server for this to run correctly.
+Create tables and example development data:
+```
+$ npm run seed
+```
 
 ## Testing
 
-Tests use [Mocha](http://mochajs.org/) and [Chai.js](http://chaijs.com/). New tests should be included in the `test` directory (see `test/example.js` for an example test).
+Tests use [Mocha](http://mochajs.org/) and [Chai.js](http://chaijs.com/). New tests should be included in the `test` directory.
 
 To execute the test suite, run `npm test`.
-
-## Tables
-
-New tables should be specified in a `.sql` file in the `database` directory. They should also be added to the `TABLES` variable in the `Makefile`.
