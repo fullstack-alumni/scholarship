@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Footer from 'components/footer/footer';
-import TitleBar from 'components/title_bar/title_bar';
+import Footer from './footer/footer';
+import TitleBar from './title_bar/title_bar';
 
 export default class Apply extends React.PureComponent {
     renderInfo() {
